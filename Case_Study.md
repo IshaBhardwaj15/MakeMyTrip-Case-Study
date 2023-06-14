@@ -13,7 +13,7 @@ left join case_study.booking_table as b on
 group by u.Segment;
 ```
 
-
+![image](https://github.com/IshaBhardwaj15/MakeMyTrip-Case-Study/blob/main/ss/Screenshot%20(63).png)
 
 #### 2. WAQ to identify users whose first booking was a hotel booking
 
@@ -40,6 +40,8 @@ select distinct(User_id) from
 where first_booking='Hotel'
 ```
 
+![image](https://github.com/IshaBhardwaj15/MakeMyTrip-Case-Study/blob/main/ss/Screenshot%20(64).png)
+
 #### 3. WAQ to calculate the days between first and last booking of each user
 
 ```sql
@@ -47,6 +49,8 @@ select User_id, DATEDIFF(day,min(Booking_date),max(Booking_date)) as #days_bw_fi
 from case_study.booking_table
 Group by User_id
 ```
+
+![image](https://github.com/IshaBhardwaj15/MakeMyTrip-Case-Study/blob/main/ss/Screenshot%20(65).png)
 
 #### 4. WAQ to count the number of flights and hotel bookings in each of the user segments for the user for the year 2022
 
@@ -59,3 +63,5 @@ join case_study.user_table as u on
 	u.User_id=b.User_id
 group by u.Segment
 ```
+
+![image](https://github.com/IshaBhardwaj15/MakeMyTrip-Case-Study/blob/main/ss/Screenshot%20(66).png)
